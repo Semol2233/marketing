@@ -605,16 +605,20 @@ from datetime import datetime, timedelta
 
 
 class marketing_classview(LoginRequiredMixin,CreateView):
-
     form_class = Markting_updatefrom
     model = Marketing_update
     template_name = 'nv/uplode_monthbill.html'
 
 
+
+
+
 class bkashtotal(LoginRequiredMixin,ListView):
-    context_object_name = 'bkshuser'
     model = Marketing_update
     template_name= 'goninda/bkashtotal.html'
 
-
-
+    def get_context_data(self, **kwargs):
+         context = super(bkashtotal, self).get_context_data(**kwargs)
+         context['countfollowup'] = Marketing_update.objects.filter(status__status_cos__contains='Follow').count()
+         context['bkshuser'] = Marketing_update.objects.all()
+         return context

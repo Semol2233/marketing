@@ -167,6 +167,7 @@ from .models import *
 
 
 
+
 class DateIssnput(forms.DateInput):
     input_type = 'date'
 
@@ -184,10 +185,8 @@ class Markting_updatefrom(forms.ModelForm):
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'..'}),
             'status':forms.Select(attrs={'class':'form-control','placeholder':'..'}),
 
-
-            
-          
         }
+
 
     def __init__(self,*args, **kwargs):
         super(Markting_updatefrom,self).__init__(*args, **kwargs)
@@ -202,3 +201,6 @@ class Markting_updatefrom(forms.ModelForm):
     def __init__(self,*args, **kwargs):
         super(Markting_updatefrom,self).__init__(*args, **kwargs)
         self.fields['status'].empty_label="status"
+
+
+
