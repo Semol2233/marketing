@@ -181,7 +181,7 @@ class Markting_updatefrom(forms.ModelForm):
             'customer_Location':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
             'customer_Source':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'..'}),
-            'status':forms.Select(attrs={'class':'form-control','placeholder':'..'}),
+            'status':forms.Select(attrs={}),
 
 
             
