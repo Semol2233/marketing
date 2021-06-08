@@ -189,16 +189,4 @@ class Markting_updatefrom(forms.ModelForm):
           
         }
 
-    def __init__(self,*args, **kwargs):
-        super(Markting_updatefrom,self).__init__(*args, **kwargs)
-        self.fields['customer_Location'].empty_label="Month"
-
-    def __init__(self,*args, **kwargs):
-        super(Markting_updatefrom,self).__init__(*args, **kwargs)
-        self.fields['customer_Source'].empty_label="Source"
-
-
-
-    def __init__(self,*args, **kwargs):
-        super(Markting_updatefrom,self).__init__(*args, **kwargs)
-        self.fields['status'].empty_label="status"
+ 
