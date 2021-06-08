@@ -622,3 +622,31 @@ class bkashtotal(LoginRequiredMixin,ListView):
          context['countfollowup'] = Marketing_update.objects.filter(status__status_cos__contains='Follow').count()
          context['bkshuser'] = Marketing_update.objects.all()
          return context
+
+
+
+
+class OFFICE_Pickup(LoginRequiredMixin,ListView):
+    model = Marketing_update
+    template_name= 'goninda/bkashtotal.html'
+   
+    def get_context_data(self, **kwargs):
+         context = super(OFFICE_Pickup, self).get_context_data(**kwargs)
+         context['countfollowup'] = Marketing_update.objects.filter(status__status_cos__contains='Follow').count()
+         context['bkshuser'] = Marketing_update.objects.filter(status__status_cos__contains='Follow')
+
+         return context
+
+
+
+class cnfm(LoginRequiredMixin,ListView):
+    model = Marketing_update
+    template_name= 'goninda/bkashtotal.html'
+   
+    def get_context_data(self, **kwargs):
+         context = super(cnfm, self).get_context_data(**kwargs)
+         context['countconfirm'] = Marketing_update.objects.filter(status__status_cos__contains='Confirm').count()
+         context['bkshuser'] = Marketing_update.objects.filter(status__status_cos__contains='Confirm')
+
+         return context
+
