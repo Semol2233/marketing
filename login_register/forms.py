@@ -177,12 +177,28 @@ class Markting_updatefrom(forms.ModelForm):
         widgets = {
             'customer_Name': forms.TextInput(attrs={'class':'form-control'}),
             'customer_Number': forms.TextInput(attrs={'class':'form-control'}),
+            'auto_date':DateIssnput(),
             'confirmation_date':DateIssnput(),
-            'customer_Location':forms.Select(attrs={}),
-            'customer_Source':forms.Select(attrs={}),
+            'customer_Location':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
+            'customer_Source':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'..'}),
-            'status':forms.Select(attrs={}),
-               
+            'status':forms.Select(attrs={'class':'form-control','placeholder':'..'}),
+
+
+            
+          
         }
 
- 
+    def __init__(self,*args, **kwargs):
+        super(Markting_updatefrom,self).__init__(*args, **kwargs)
+        self.fields['customer_Location'].empty_label="Month"
+
+    def __init__(self,*args, **kwargs):
+        super(Markting_updatefrom,self).__init__(*args, **kwargs)
+        self.fields['customer_Source'].empty_label="Source"
+
+
+
+    def __init__(self,*args, **kwargs):
+        super(Markting_updatefrom,self).__init__(*args, **kwargs)
+        self.fields['status'].empty_label="status"
