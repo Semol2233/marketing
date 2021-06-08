@@ -178,8 +178,8 @@ class Markting_updatefrom(forms.ModelForm):
             'customer_Name': forms.TextInput(attrs={'class':'form-control'}),
             'customer_Number': forms.TextInput(attrs={'class':'form-control'}),
             'confirmation_date':DateIssnput(),
-            'customer_Location':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
-            'customer_Source':forms.Select(attrs={'class':'form-control','placeholder':'Offie Cost...'}),
+            'customer_Location':forms.Select(attrs={}),
+            'customer_Source':forms.Select(attrs={}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'..'}),
             'status':forms.Select(attrs={}),
 
