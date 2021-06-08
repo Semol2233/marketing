@@ -173,7 +173,7 @@ class DateIssnput(forms.DateInput):
 class Markting_updatefrom(forms.ModelForm):
     class Meta:
         model = Marketing_update
-        fields = ['customer_Name','customer_Number','customer_Location','customer_Source','confirmation_date','description','auto_date','status']
+        fields = ['customer_Name','customer_Number','customer_Location','customer_Source','confirmation_date','description','status']
         widgets = {
             'customer_Name': forms.TextInput(attrs={'class':'form-control'}),
             'customer_Number': forms.TextInput(attrs={'class':'form-control'}),
@@ -182,10 +182,7 @@ class Markting_updatefrom(forms.ModelForm):
             'customer_Source':forms.Select(attrs={}),
             'description':forms.Textarea(attrs={'class':'form-control','placeholder':'..'}),
             'status':forms.Select(attrs={}),
-
-
-            
-          
+               
         }
 
  
