@@ -90,10 +90,12 @@ DATABASES = {
         'NAME': 'mktproject',
         'USER': 'mktproject',
         'PASSWORD': 'mktproject',
-        'HOST': '192.168.0.189',
+        'HOST': '192.168.1.220',
         'PORT': '5432',
     }
 }
+
+
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -126,6 +128,7 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
